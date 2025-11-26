@@ -268,3 +268,145 @@ img{max-width:100%;height:auto;display:block}
   .about-text h1{ font-size: 40px; }
   .about-visual{ grid-template-columns: 1fr; }
 }
+
+/* ====== Menú desplegable (Tendencias) ====== */
+
+.has-dropdown {
+  position: relative;           /* para que el menú se coloque debajo */
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+}
+
+/* El menú que se despliega */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  padding: 8px 0;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  display: none;          /* por defecto está escondido */
+  z-index: 20;
+}
+
+/* Cuando tenga la clase .open, se muestra */
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #111;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  background: #f3f4f6;
+}
+
+/* Mensaje de bienvenida dinámico */
+.welcome-message {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ====== SLIDER DE IMÁGENES ====== */
+
+.slider-section {
+  padding: 40px 0 60px;
+}
+
+.slider-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider-track {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.slide {
+  display: none;          /* todas escondidas por defecto */
+  text-align: center;
+}
+
+.slide.active {
+  display: block;         /* solo la activa se ve */
+}
+
+.slide img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.slide figcaption {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.slider-btn {
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d1d5db;
+  cursor: pointer;
+}
+
+.dot-dot.active {
+  background: #111827;
+}
+
+@media (max-width: 680px) {
+  .slider-wrapper {
+    gap: 4px;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -19,14 +19,22 @@
                 >Inicio</a
               >
             </li>
-            <li>
-              <a
-                href="/tendencias"
-                class="pill"
-                title="Ver las últimas tendencias en K-pop y cultura"
-                >Tendencias</a
+            <li class="has-dropdown">
+              <button
+                class="pill dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
+                Tendencias
+              </button>
+
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-link">K-dramas</a></li>
+                <li><a href="#" class="dropdown-link">Comebacks de K-pop</a></li>
+                <li><a href="#" class="dropdown-link">Moda & styling</a></li>
+              </ul>
             </li>
+
             <li>
               <a
                 href="/analisis"
@@ -64,6 +72,8 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          <p id="welcome-message" class="welcome-message"></p>
+
 
           <!-- tira de tarjetas -->
           <div class="card-strip">
@@ -119,6 +129,57 @@
           />
         </div>
       </section>
+      
+      <!-- SLIDER DE IMÁGENES -->
+      <section class="slider-section">
+        <div class="container">
+          <h2 class="slider-title">Momentos destacados</h2>
+
+          <div class="slider-wrapper">
+            <!-- Botón anterior -->
+            <button class="slider-btn slider-prev" aria-label="Ver imagen anterior">
+              &#10094;
+            </button>
+
+            <!-- Pista donde van las diapositivas -->
+            <div class="slider-track">
+              <figure class="slide active">
+                <img src="images/rectangle-18-11.png" alt="Influencer K-pop 1">
+                <figcaption>Influencers y estilos que marcan tendencia.</figcaption>
+              </figure>
+
+              <figure class="slide">
+                <img src="images/rectangle-17-15.png" alt="Influencer K-pop 2">
+                <figcaption>Escenarios y comebacks inolvidables.</figcaption>
+              </figure>
+
+              <figure class="slide">
+                <img src="images/rectangle-19-25.png" alt="Influencer K-pop 3">
+                <figcaption>Series y universos que conectan con el fandom.</figcaption>
+              </figure>
+            </div>
+
+            <!-- Botón siguiente -->
+            <button class="slider-btn slider-next" aria-label="Ver imagen siguiente">
+              &#10095;
+            </button>
+          </div>
+
+          <!-- Puntos de navegación -->
+          <div class="slider-dots">
+            <span class="dot-dot active" data-index="0"></span>
+            <span class="dot-dot" data-index="1"></span>
+            <span class="dot-dot" data-index="2"></span>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+
+    </main>
+
+      <script src="script.js"></script>
+
   </body>
 </html>
